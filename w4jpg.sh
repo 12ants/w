@@ -28,7 +28,7 @@ tail -n+4 $ww|fmt -w 42 -g 26|gum style --padding "0 4 2 4" --foreground "#22222
 printf %b "  "|ansifilter -c -M -F "monospace" -s 22) > $wf/log/$word.xml; 
 ####
 ####
-printf %b "\n$word ."; 
+printf %b "\n$word\n ."; 
 convert -border 4 -bordercolor black -gravity center pango:"$(cat $wf/log/$word.xml)" $wf/log/$word.jpg 2>/dev/null; 
 printf %b "."; 
 ####
